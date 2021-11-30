@@ -18,4 +18,4 @@ paste to bookmark's URL
 
 ### use bookmarklet
 
-open https://ssl.jobcan.jp/m/work/conditions task page and Click bookmarklet
+open https://ssl.jobcan.jp/m/work/conditions page and Click bookmarklet
