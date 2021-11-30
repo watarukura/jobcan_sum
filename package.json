@@ -4,7 +4,7 @@
   "description": "",
   "main": "jobcan.js",
   "scripts": {
-    "generate": "node_modules/google-closure-compiler/cli.js jobcan.js | sed -e '1,1s/^/javascript:/' > jobcan.bookmarklet"
+    "generate": "bookmarkletify --input jobcan.js > jobcan.bookmarklet"
   },
   "repository": {
     "type": "git",
@@ -14,6 +14,6 @@
   "license": "MIT",
   "homepage": "https://github.com/watarukura/jobcan_sum#readme",
   "dependencies": {
-    "google-closure-compiler": "^20181210.0.0"
+    "@neos21/bookmarkletify": "^0.0.3"
   }
 }
