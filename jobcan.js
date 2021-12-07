@@ -4,12 +4,12 @@ javascript:(function () {
         return;
     }
     const today = new Date().toLocaleDateString();
-    const page_month = document.querySelector("#container > table.data03 > tbody > tr > th").innerText.replace(/[年月]/, '/');
+    const page_month = document.querySelector("#container > table.data03 > tbody > tr > th").innerText.replace(/[年月]/g, '/');
     const schedules = Array.from(document.querySelector(".schedule4").rows);
     const sum = schedules
         .map(function(schedule) {
            return {
-             date: schedule.children[0].innerText,
+             date: schedule.children[0].innerText.replace(/ .*/, ''),
              state: schedule.children[1].innerText,
              time: schedule.children[5].innerText
            };
