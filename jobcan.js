@@ -3,7 +3,7 @@ javascript:(function () {
         alert("failed");
         return;
     }
-    const yesterday = new Date(new Date().setDate(new Date().getDate()-1)).toLocaleDateString();
+    const today = new Date().toLocaleDateString();
     const page_month = document.querySelector("#container > table.data03 > tbody > tr > th").innerText.replace(/[年月]/, '/');
     const schedules = Array.from(document.querySelector(".schedule4").rows);
     const sum = schedules
@@ -15,7 +15,7 @@ javascript:(function () {
            };
          })
         .filter(schedule => schedule.time.includes("時間"))
-        .filter(schedule => page_month.concat(schedule.date) != yesterday)
+        .filter(schedule => page_month.concat(schedule.date) != today)
         .map(p => (p.state == "有" ? -240 : -480) + parseInt(p.time.substr(0,2)) *60 + parseInt(p.time.substr(4,2)))
         .reduce((prev, curr) => prev + curr);
     alert(`${sum}分の差異があります`);
