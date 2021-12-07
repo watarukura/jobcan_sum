@@ -4,7 +4,7 @@ javascript:(function () {
         return;
     }
     const today = new Date().toLocaleDateString();
-    const page_month = document.querySelector("#container > table.data03 > tbody > tr > th").innerText.replace(/[年月]/, '/');
+    const page_month = document.querySelector("#container > table.data03 > tbody > tr > th").innerText.replace(/[年月]/g, '/');
     const schedules = Array.from(document.querySelector(".schedule4").rows);
     const sum = schedules
         .map(function(schedule) {
