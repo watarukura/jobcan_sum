@@ -9,7 +9,7 @@ javascript:(function () {
     const sum = schedules
         .map(function(schedule) {
            return {
-             date: schedule.children[0].innerText,
+             date: schedule.children[0].innerText.replace(/ .*/, ''),
              state: schedule.children[1].innerText,
              time: schedule.children[5].innerText
            };
