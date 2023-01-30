@@ -16,7 +16,7 @@ javascript:(function () {
          })
         .filter(schedule => schedule.time.includes("時間"))
         .filter(schedule => page_month.concat(schedule.date) != today)
-        .map(p => (p.state == "有" ? -240 : -480) + parseInt(p.time.substr(0,2)) *60 + parseInt(p.time.substr(4,2)))
+        .map(p => (p.state == "有"||p.state == "特" ? -240 : -480) + parseInt(p.time.substr(0,2)) *60 + parseInt(p.time.substr(4,2)))
         .reduce((prev, curr) => prev + curr);
-    alert(`${sum}分の差異があります`);
+    alert(`${today} の前日までの勤務時間を計算します\n${sum}分の差異があります`);
 })()
