@@ -14,6 +14,6 @@
   "license": "MIT",
   "homepage": "https://github.com/watarukura/jobcan_sum#readme",
   "dependencies": {
-    "@neos21/bookmarkletify": "^0.0.3"
+    "@neos21/bookmarkletify": "^0.0.5"
   }
 }
